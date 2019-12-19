@@ -61,4 +61,7 @@ _testmain.go
 *.test
 *.prof
 
+.vscode
+go.sum
+
 
