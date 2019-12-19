@@ -1,6 +1,9 @@
 package facade
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func NewAPI() API {
 	return &apiImpl{
@@ -39,6 +42,7 @@ type AModuleAPI interface {
 type aModuleImpl struct{}
 
 func (*aModuleImpl) TestA() string {
+	log.Println("TestA is running")
 	return "A module running"
 }
 
@@ -55,5 +59,6 @@ type BModuleAPI interface {
 type bModuleImpl struct{}
 
 func (*bModuleImpl) TestB() string {
+	log.Println("TestB is running")
 	return "B module running"
 }
