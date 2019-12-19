@@ -2,7 +2,7 @@ package facade
 
 import "testing"
 
-var expect = "A module running\nB module running"
+var expect = "A module impl2 running\nB module running"
 
 // TestFacadeAPI ...
 func TestFacadeAPI(t *testing.T) {

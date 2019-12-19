@@ -7,7 +7,7 @@ import (
 
 func NewAPI() API {
 	return &apiImpl{
-		a: NewAModuleAPI(),
+		a: NewAModuleAPI2(),
 		b: NewBModuleAPI(),
 	}
 }
@@ -37,6 +37,17 @@ func NewAModuleAPI() AModuleAPI {
 //AModuleAPI ...
 type AModuleAPI interface {
 	TestA() string
+}
+
+type aModuleImpl2 struct{}
+
+func (*aModuleImpl2) TestA() string {
+	log.Println("aModuleImpl2 is running")
+	return "A module impl2 running"
+}
+
+func NewAModuleAPI2() AModuleAPI {
+	return &aModuleImpl2{}
 }
 
 type aModuleImpl struct{}
